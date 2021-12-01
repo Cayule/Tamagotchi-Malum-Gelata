@@ -1,8 +1,41 @@
 /*  This is where all my fancy things will go! Here's what I
 will need to do at minimum:
 __ 
-
 */
+
+body {
+background-image: url(");
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.Title-Screen {
+    text-align: center;
+}
+
+.Winner {
+    text-align: center;
+}
+
+.Loser {
+    text-align: center;
+}
+
+.hidden {
+display: none;
+}
+
+.Title-Text {
+    font-size: 100px;
+    margin-top: 150px;
+    /*line-height: 4; */
+    color: rgb(62, 6, 62)
+}
+
+h2 {
+    font-size: 50px;
+}
 
 
 /* SANITY CHECK FOR CSS: CONFIRMED WORKING.
