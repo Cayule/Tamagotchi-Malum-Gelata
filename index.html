@@ -12,15 +12,14 @@
 <body>
     <main>
 
-<div class='Title-Screen'>
+<div class="Title-Screen">
     <!--Place pre-game things here-->
 
 <!-- Title-->
-    <h1> Malum Gelata </h1>
-
-    <!-- This was to test if jquery was working-->
-<!-- <p onclick="$(this).hide();">This is a paragraph</p> -->
-<!-- End of jquery test-->
+    <h1 class="Title-Text"> Malum Gelata </h1>
+<form class="start-game">
+    <div class="get-username"><span>The Destructor&nbsp;</span><input class="petname-field" type="text" placeholder="Enter Name Here"><span>.</span></div>
+    <input class="start-button" type="submit" value="Click Here To Play">
 
     <h2> How to..."play"</h2>
     <p>You must appease the slime!</p>
@@ -29,8 +28,34 @@
         <br> Churning in it's dark thoughts, you must limit the reach of it's Malfeasance.
     </p>
 
+
 </div>
 
+<div class='Winner'>
+
+    <h2>You've saved the world!</h2>
+    <p>The slime begins seeping back whence it came.
+        <br> It shall lay dormant, until it is disturbed and made to reawaken.
+        <br> You are free to go, unless you feel like tempting fate once more?
+    </p>
+    <form class="start-game">
+        <button class="reset-button">Restart Game?</button>
+    </form>
+
+</div>
+
+<div class='Loser'>
+
+    <h2>The world has fallen...</h2>
+    <p>Your mistep has cost the world much, but all is not lost.
+        <br> Try your hand again, restart and appease the slime!
+    </p>
+
+    <form class="start-game">
+        <button class="reset-button">Restart Game?</button>
+    </form>
+
+</div>
 <div class='Action Buttons'> 
 <!-- clas and div to capture all the action buttons:
 -Gluttony
@@ -39,14 +64,12 @@
 -->
 </div>
 
+<!-- NEED BARS-->
+
 <div class='-Withering'>
     <!-- Div for the aging counter-->
 
 </div>
-
-<div class='Win Game'> </div>
-
-<div class='Lose Game'> </div>
 
 
     </main>
@@ -54,4 +77,19 @@
     <!-- <h1>AM I SANE?!?</h1> -->
     
 </body>
+
 </html>
+
+<!-- Sanity Checks -->
+    <!-- This was to test if jquery was working-->
+<!-- <p onclick="$(this).hide();">This is a paragraph</p> -->
+<!-- End of jquery test-->
+
+<!--Notes:
+&nbsp: non-breaking space; used if breaking apart text would cause issues-->
+<!-- Additional References:
+jquery source: https://developers.google.com/speed/libraries#jquery
+Pet Name Button: https://stackoverflow.com/questions/34028678/how-to-get-a-specific-form-elements-using-jquery
+hidden class: https://stackoverflow.com/questions/48123445/bootstrap-4-hidden-class-doesnt-work
+hidden class: https://www.w3schools.com/css/css_display_visibility.asp
+-->
