@@ -1,105 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="STYLES/style.css">
+    <link rel="stylesheet" href="STYLES/style.css" />
     <script src="JAVASCRIPT/script.js" defer></script>
     <title>GOTCHI</title>
-</head>
-<body>
-    <main>
+  </head>
+  <body>
+    <div class="Title-Screen">
+      <!-- Title-->
+      <h1 class="Title-Text">Malum Gelata</h1>
 
-<div class="Title-Screen">
+      <form class="start-game">
+        <div class="getpetname">
+          <span>The Destructor&nbsp;</span
+          ><input class="petname" type="text" placeholder="Enter Name Here" />
+        </div>
+        <input class="start-button" type="submit" value="Press If You Dare" />
+      </form>
+      <h2>How to..."play"</h2>
+      <p id=wilbur>You must appease the slime!</p>
+      <p>
+        As the slime hungers, you must satisfy it's Gluttony before it consumes
+        you... <br />
+        If the slime Awakens too early, the nightmare become reality. <br />
+        Churning in it's dark thoughts, you must limit the reach of it's
+        Malfeasance.
+      </p>
+    </div>
 
-<!-- Title-->
-    <h1 class="Title-Text"> Malum Gelata </h1>
-<form class="start-game">
-    <div class="get-username"><span>The Destructor&nbsp;</span><input class="petname-field" type="text" placeholder="Enter Name Here"><span>.</span></div>
-    <input class="start-button" type="submit" value="Click Here To Play">
+    <div id="avatar">
+      <img id="ham" src="images/Blob_Dx2.png" />
+    </div>
 
-    <h2> How to..."play"</h2>
-    <p>You must appease the slime!</p>
-    <p>As the slime hungers, you must satisfy it's Gluttony before it consumes you...
-        <br> If the slime Awakens too early, the nightmare become reality. 
-        <br> Churning in it's dark thoughts, you must limit the reach of it's Malfeasance.
-    </p>
+    <div class="Winner">
+      <h2>You've saved the world!</h2>
+      <p>
+        The slime begins seeping back whence it came. <br />
+        It shall lay dormant, until it is disturbed and made to reawaken. <br />
+        You are free to go, unless you feel like tempting fate once more?
+      </p>
+      <form class="win-game">
+        <button class="restart-button">Restart Game?</button>
+      </form>
+    </div>
 
+    <div class="Loser">
+      <h2>The world has fallen...</h2>
+      <p>
+        Your mistep has cost the world much, but all is not lost. <br />
+        Try your hand again, restart and appease the slime!
+      </p>
 
+      <form class="lose-game">
+        <button class="restart-button" onClick="window.location.reload();">
+          Restart Game?
+        </button>
+      </form>
+    </div>
 
-</div>
-
-<div class='Winner'>
-
-    <h2>You've saved the world!</h2>
-    <p>The slime begins seeping back whence it came.
-        <br> It shall lay dormant, until it is disturbed and made to reawaken.
-        <br> You are free to go, unless you feel like tempting fate once more?
-    </p>
-    <form class="start-game">
-        <button class="reset-button">Restart Game?</button>
-    </form>
-
-</div>
-
-<div class='Loser'>
-
-    <h2>The world has fallen...</h2>
-    <p>Your mistep has cost the world much, but all is not lost.
-        <br> Try your hand again, restart and appease the slime!
-    </p>
-
-    <form class="start-game">
-        <button class="reset-button">Restart Game?</button>
-    </form>
-
-</div>
-
-<div class="displayName">
-
-    <p>The Destructor: <spand id="show-name"></spand></p>
-</div>
-<!--Bars-->
-<!-- <div class="progbar" id="gluttony">
-    <span style="width: 100%"></span>-->
-
-    <div id="myProgress">
-        <div id="myBar">10%</div>
-      </div>
-
-      <input class="" type="submit" value="Click Here To Play">
-
-    <p>Gluttony</p>
-  </div>
-
-<div class='Action Buttons'> 
-<!-- clas and div to capture all the action buttons:
--Gluttony
--Awakening
--Malfeasance
--->
-</div>
-
-<!-- NEED BARS-->
-
-<div class='-Withering'>
-    <!-- Div for the aging counter-->
-
-</div>
+    <div class="displayName">
+      <p>The Destructor: <span id="show-name"></span></p>
+    </div>
 
 
-    </main>
+    <p>Gluttony Meter</p>
+
+    <div id="my-progress">
+      <div id="my-bar">10%</div>
+    </div>
+
+    <button id="gluttony-button">Decrease Gluttony</button>
+
+    
+    <p>Awakening Meter</p>
+
+    <div id="my-awaken">
+      <div id="awaken-bar">40%</div>
+    </div>
+
+    <button id="awaken-button">Decrease Awakening</button>
+
+    
+
+    <p>Malfeasance Meter</p>
+
+    <div id="my-evil">
+      <div id="naughty-bar">40%</div>
+    </div>
+
+    <button id="evil-button">Decrease Evil</button>
+
+
+    <p>Age:</p>
+    <p id="age">1</p>
+
+    <div class="Action Buttons">
+
+    </div>
+
+    <div class="-Withering">
+      <!-- Div for the aging counter-->
+    </div>
+
     <!--SANITY CHECK WORKING-->
     <!-- <h1>AM I SANE?!?</h1> -->
-    
-</body>
-
+  </body>
 </html>
 
 <!-- Sanity Checks -->
-    <!-- This was to test if jquery was working-->
+<!-- This was to test if jquery was working-->
 <!-- <p onclick="$(this).hide();">This is a paragraph</p> -->
 <!-- End of jquery test-->
 
